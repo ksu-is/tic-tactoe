@@ -40,7 +40,7 @@ def tic_tac_toe():
         else:
             print("INVALID ENTRY, Choose 1 or 2")
 
-    player1_mark = "X" if p1 == "1" else "0"
+    player1_mark = "X" if p1 == "1" else "O"
     player2_mark = "O" if player1_mark == "X" else "X"
     turn = 1
 
