@@ -4,13 +4,13 @@ def tic_tac_toe():
 
     def table():
         print("        |       |     ")
-        print("   ", a[1], "  |  ", a[2], "  |  ", a[3])
+        print("   " + str([1]) + "  |  " + str(a[2]) + "  |  " + str(a[3]))
         print("________|_______|_______")
         print("        |       |     ")
-        print("   ", a[4], "  |  ", a[5], "  |  ", a[6])
+        print("   " + str(a[4]) + "  |  " + str(a[5]) + "  |  " + str(a[6]))
         print("________|_______|_______")
         print("        |       |     ")
-        print("   ", a[7], "  |  ", a[8], "  |  ", a[9])
+        print("   " + str(a[7]) + "  |  " + str(a[8]) + "  |  " + str(a[9]))
         print("        |       |     ")
 
     def place_mark(player, mark):
