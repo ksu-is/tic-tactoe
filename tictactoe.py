@@ -1,7 +1,9 @@
 Print("Welcome to Tic Tac Toe!")
 def tic_tac_toe():
     a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
+    p1_wins = 0
+    p2_wins = 0
+    
     def table():
         print("        |       |     ")
         print("   " + str([1]) + "  |  " + str(a[2]) + "  |  " + str(a[3]))
