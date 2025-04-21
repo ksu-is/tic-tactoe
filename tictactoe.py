@@ -60,7 +60,7 @@ def tic_tac_toe():
         turn += 1
 
     restart = input("Do you want to play again, choose Yes or No: ")
-    if restart == "yes" or restart == "Yes":
+    if restart.lower() == "Yes":
         tic_tac_toe()
     elif restart == "no" or restart == "No":
         print("Thanks for playing!")
