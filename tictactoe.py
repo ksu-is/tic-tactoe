@@ -31,6 +31,8 @@ def tic_tac_toe():
             if a[x] == a[y] == a[z]:
                 return True
         return False
+
+    print("Starting a new round...\n")
     table()
     while True:
         p1 = input("player 1 choose: 1 for X or 2 for 0: ")
