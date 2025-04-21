@@ -17,6 +17,7 @@ def tic_tac_toe():
 
     def place_mark(player, mark):
         while True:
+            player_turn = 1
             position = input("player choose square (1-9): ")
             if position.isdigit() and int(position) in range(1, 10) and str(a[int(position)]) == position:
                 a[int(position)] = mark
@@ -34,18 +35,20 @@ def tic_tac_toe():
 
     print("Starting a new round...\n")
     table()
-    while True:
-        p1 = input("player 1 choose: 1 for X or 2 for 0: ")
-        p2 = input("player 2 choose: 1 for X or 2 for 0: ")
+    """while True:
+        p1 = input("player 1 choose: X or 0: ")
+        p2 = input("player 2 choose: X or 0: ")
         if p1 == p2:
             print("INVALID ENTRY, both players chose the same option")
-        elif p1 == "1" and p2 == "2" or p1 == "2" and p2 == "1":
+        elif p1.lower() == "X" and p2 == "0" or p1.lower() == "0" and p2.lower() == "X":
             break
         else:
-            print("INVALID ENTRY, Choose 1 or 2")
+            print("INVALID ENTRY, Choose 1 or 2")"""
 
     player1_mark = "X" if p1 == "1" else "O"
     player2_mark = "O" if player1_mark == "X" else "X"
+    player1_mark = "X"
+    player2_mark = "O"
     turn = 1
 
     while True:
@@ -77,4 +80,3 @@ def tic_tac_toe():
 
 
 tic_tac_toe()
-#random
