@@ -24,14 +24,14 @@ Made minor updates and commit messages in the repository
 - [x] Submitted quiz
 
 6 code changes from Lizbeth
-- [ ] 1.
-- [ ] 2.
-- [ ] 3.
-- [ ] 4. 
-- [ ] 5. 
-- [ ] 6.
-- [ ] Each commit has a comment explaining what was done
-- [ ] Submitted quiz
+- [x] 1.
+- [x] 2.
+- [x] 3.
+- [x] 4. 
+- [x] 5. 
+- [x] 6.
+- [x] Each commit has a comment explaining what was done
+- [x] Submitted quiz
 
 
 
