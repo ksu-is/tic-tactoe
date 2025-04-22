@@ -1,4 +1,4 @@
-Print("Welcome to Tic Tac Toe!")
+print("Welcome to Tic Tac Toe!")
 def tic_tac_toe():
     a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     p1_wins = 0
