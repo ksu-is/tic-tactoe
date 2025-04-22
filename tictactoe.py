@@ -2,10 +2,6 @@ import tkinter as tk
 from tkinter import messagebox
 
 class TicTacToe(tk.Frame):
-    """
-    A simple Tic Tac Toe app developed using the Tkinter GUI.
-    Matches layout and structure of calculator app.
-    """
 
     def __init__(self, master):
         tk.Frame.__init__(self, master)
@@ -16,34 +12,34 @@ class TicTacToe(tk.Frame):
         self.create_widgets()
 
     def create_widgets(self):
-        self.status = tk.Label(self, text="Player X's Turn", font=("Arial", 16), fg="white", bg="black")
+        self.status = tk.Label(self, text="Player X's Turn", font=("Arial", 16))
         self.status.grid(row=0, column=0, columnspan=3, pady=10)
 
-        self.one_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(1))
+        self.one_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), command=lambda: self.play(1))
         self.one_btn.grid(row=1, column=0, padx=5, pady=5)
 
-        self.two_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(2))
+        self.two_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24),  command=lambda: self.play(2))
         self.two_btn.grid(row=1, column=1, padx=5, pady=5)
 
-        self.three_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(3))
+        self.three_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24),  command=lambda: self.play(3))
         self.three_btn.grid(row=1, column=2, padx=5, pady=5)
 
-        self.four_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(4))
+        self.four_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24),command=lambda: self.play(4))
         self.four_btn.grid(row=2, column=0, padx=5, pady=5)
 
-        self.five_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(5))
+        self.five_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), command=lambda: self.play(5))
         self.five_btn.grid(row=2, column=1, padx=5, pady=5)
 
-        self.six_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(6))
+        self.six_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), command=lambda: self.play(6))
         self.six_btn.grid(row=2, column=2, padx=5, pady=5)
 
-        self.seven_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(7))
+        self.seven_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), command=lambda: self.play(7))
         self.seven_btn.grid(row=3, column=0, padx=5, pady=5)
 
-        self.eight_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(8))
+        self.eight_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), command=lambda: self.play(8))
         self.eight_btn.grid(row=3, column=1, padx=5, pady=5)
 
-        self.nine_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24), fg="black", bg="white", command=lambda: self.play(9))
+        self.nine_btn = tk.Button(self, text="", width=9, height=4, font=("Arial", 24),command=lambda: self.play(9))
         self.nine_btn.grid(row=3, column=2, padx=5, pady=5)
 
         self.buttons = {
@@ -95,7 +91,6 @@ class TicTacToe(tk.Frame):
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.configure(bg="black")
     root.geometry("300x400")
     root.title("Tic Tac Toe")
     app = TicTacToe(root)
