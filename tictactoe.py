@@ -171,3 +171,103 @@ def tic_tac_toe():
 
 tic_tac_toe()
 """
+"""
+def tic_tac_toe():
+    a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    def table():
+        print("\n     |     |     ")
+        print(f"  {a[1]}  |  {a[2]}  |  {a[3]}")
+        print("_____|_____|_____")
+        print("     |     |     ")
+        print(f"  {a[4]}  |  {a[5]}  |  {a[6]}")
+        print("_____|_____|_____")
+        print("     |     |     ")
+        print(f"  {a[7]}  |  {a[8]}  |  {a[9]}")
+        print("     |     |     \n")
+
+    def X1():
+        b = input("Player 1 Choose Square: ")
+        if b in map(str, range(1, 10)):
+            a[int(b)] = "X"
+        else:
+            print("INVALID ENTRY, enter number: ")
+        table()
+
+    def X2():
+        b = input("Player 2 Choose Square: ")
+        if b in map(str, range(1, 10)):
+            a[int(b)] = "X"
+        else:
+            print("INVALID ENTRY, enter number: ")
+        table()
+
+    def O1():
+        b = input("Player 1 Choose Square: ")
+        if b in map(str, range(1, 10)):
+            a[int(b)] = "O"
+        else:
+            print("INVALID ENTRY, enter number: ")
+        table()
+
+    def O2():
+        b = input("Player 2 Choose Square: ")
+        if b in map(str, range(1, 10)):
+            a[int(b)] = "O"
+        else:
+            print("INVALID ENTRY, enter number: ")
+        table()
+
+    table()
+    while True:
+        p1 = input("Player 1 choose: 1 for X or 2 for O: ")
+        p2 = input("Player 2 choose: 1 for X or 2 for O: ")
+        if p1 == p2:
+            print("INVALID ENTRY, both players chose the same option")
+        elif (p1, p2) in [("1", "2"), ("2", "1")]:
+            break
+        else:
+            print("INVALID ENTRY, Choose 1 or 2")
+
+    def mark1(p1):
+        while True:
+            if p1 == "1":
+                X1()
+            elif p1 == "2":
+                O1()
+            if (a[1] == a[2] == a[3]) or (a[4] == a[5] == a[6]) or (a[7] == a[8] == a[9]) or \
+               (a[1] == a[4] == a[7]) or (a[2] == a[5] == a[8]) or (a[3] == a[6] == a[9]) or \
+               (a[1] == a[5] == a[9]) or (a[3] == a[5] == a[7]):
+                print("PLAYER 1 WIN'S!!")
+                break
+
+    def mark2(p2):
+        while True:
+            if p2 == "1":
+                X2()
+            elif p2 == "2":
+                O2()
+            if (a[1] == a[2] == a[3]) or (a[4] == a[5] == a[6]) or (a[7] == a[8] == a[9]) or \
+               (a[1] == a[4] == a[7]) or (a[2] == a[5] == a[8]) or (a[3] == a[6] == a[9]) or \
+               (a[1] == a[5] == a[9]) or (a[3] == a[5] == a[7]):
+                print("PLAYER 2 WIN'S!!")
+                break
+
+    mark1(p1)
+    mark2(p2)
+
+    restart = input("Do you want to play again, choose Yes or No: ")
+    if restart.lower() == "yes":
+        tic_tac_toe()
+    elif restart.lower() == "no":
+        print("Thanks for playing!")
+    else:
+        restart = input("INVALID ENTRY, choose Yes or No: ")
+        if restart.lower() == "yes":
+            tic_tac_toe()
+        elif restart.lower() == "no":
+            print("Thanks for playing!")
+
+# Start the game
+tic_tac_toe()
+"""
